@@ -1,0 +1,28 @@
+---
+import type { Lang } from '../i18n/languages';
+import { BLOG_LINKS } from '../config/blogLinks';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const links = BLOG_LINKS
+  .filter((entry) => entry.lang === lang)
+  .sort((a, b) => b.date.localeCompare(a.date));
+---
+<section class="panel">
+  <h1>Blog</h1>
+  <p>External links open in a new tab.</p>
+  {links.length === 0 ? (
+    <p>No articles yet.</p>
+  ) : (
+    <ul class="card-list">
+      {links.map((item) => (
+        <li class="card">
+          <h2><a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a></h2>
+          <p><time datetime={item.date}>{item.date}</time></p>
+          {item.excerpt && <p>{item.excerpt}</p>}
+        </li>
+      ))}
+    </ul>
+  )}
+</section>

@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "getAccess": "Kumbira Kupinda",
+    "docs": "Gwaro",
+    "systems": "Masisitimu",
+    "support": "Rubatsiro",
+    "policies": "Mitemo",
+    "status": "Mamiro",
+    "blog": "Bhurogu"
+  },
+  "cta": {
+    "apply": "Kumbira Kupinda",
+    "readDocs": "Verenga Gwaro",
+    "viewStatus": "Tarisa Mamiro"
+  },
+  "footer": {
+    "hostedBy": "Yakachengetwa uye Inotungamirirwa ne",
+    "rights": "Kodzero dzose dzakachengetedzwa.",
+    "privacy": "Mutemo weKuvanzika",
+    "accessibility": "Kuwanikwa",
+    "data": "Mutemo weData",
+    "aup": "Mashandisirwo Anobvumirwa",
+    "contact": "Taura Nesu"
+  }
+}

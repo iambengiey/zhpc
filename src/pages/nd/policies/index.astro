@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { withBase } from '../../../utils/links';
+const lang = 'nd';
+---
+<BaseLayout lang={lang} title="Policies | ZCHPC">
+  <section class="panel">
+    <h1>Policies</h1>
+    <ul>
+      <li><a href={withBase('/' + lang + '/policies/privacy')}>Privacy Policy</a></li>
+      <li><a href={withBase('/' + lang + '/policies/data')}>Data Policy</a></li>
+      <li><a href={withBase('/' + lang + '/policies/aup')}>Acceptable Use Policy</a></li>
+      <li><a href={withBase('/' + lang + '/accessibility')}>Accessibility</a></li>
+    </ul>
+  </section>
+</BaseLayout>

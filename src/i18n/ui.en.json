@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "getAccess": "Get Access",
+    "docs": "Documentation",
+    "systems": "Systems",
+    "support": "Support",
+    "policies": "Policies",
+    "status": "Status",
+    "blog": "Blog"
+  },
+  "cta": {
+    "apply": "Get Access",
+    "readDocs": "Documentation",
+    "viewStatus": "Status"
+  },
+  "footer": {
+    "hostedBy": "Hosted and Managed by",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "accessibility": "Accessibility",
+    "data": "Data Policy",
+    "aup": "Acceptable Use",
+    "contact": "Contact"
+  }
+}

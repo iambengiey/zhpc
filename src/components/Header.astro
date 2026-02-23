@@ -1,0 +1,52 @@
+---
+import { BRAND } from '../config/brand';
+import { ENABLED_LANGS, type Lang } from '../i18n/languages';
+import { getUi } from '../i18n/getUi';
+import { swapLang, withBase } from '../utils/links';
+
+interface Props {
+  lang: Lang;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+const ui = await getUi(lang);
+
+const navLinks = [
+  { href: `/${lang}/get-access`, label: ui.nav.getAccess },
+  { href: `/${lang}/docs`, label: ui.nav.docs },
+  { href: `/${lang}/status`, label: ui.nav.status },
+  { href: `/${lang}/policies`, label: ui.nav.policies },
+  { href: `/${lang}/support`, label: ui.nav.support },
+  { href: `/${lang}/blog`, label: ui.nav.blog },
+];
+---
+<header class="site-header">
+  <a class="brand" href={withBase(`/${lang}/`)}>
+    <img src={BRAND.logo} alt="ZCHPC" width="180" height="60" loading="eager" />
+  </a>
+  <nav aria-label="Primary">
+    <ul class="nav-list">
+      {navLinks.map((link) => (
+        <li><a href={withBase(link.href)}>{link.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+  <label class="lang-switcher">
+    <span class="sr-only">Language</span>
+    <select
+      aria-label="Language switcher"
+      onchange="window.location.href=this.value"
+      value={lang}
+    >
+      {ENABLED_LANGS.map((languageCode) => (
+        <option
+          value={withBase(swapLang(currentPath, languageCode))}
+          selected={languageCode === lang}
+        >
+          {languageCode.toUpperCase()}
+        </option>
+      ))}
+    </select>
+  </label>
+</header>
