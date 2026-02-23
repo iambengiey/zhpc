@@ -40,10 +40,19 @@ npm run check
 The workflow at `.github/workflows/deploy.yml` deploys on every push to `main`.
 
 It runs:
-1. `npm ci`
+1. `npm install`
 2. `npm run build`
 3. Uploads `dist`
 4. Deploys with `actions/deploy-pages`
+
+## GitHub Pages prerequisite
+
+Before the first deployment, enable GitHub Pages in repository settings and set the source to **GitHub Actions**:
+
+- `Settings` → `Pages`
+- Under **Build and deployment**, choose **Source: GitHub Actions**
+
+If Pages is not enabled, `actions/deploy-pages@v4` may fail with `404 Not Found` while creating the deployment.
 
 ## Base path and site URL configuration
 
