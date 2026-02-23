@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "getAccess": "Thola Ukungena",
+    "docs": "Imibhalo",
+    "systems": "Amasistimu",
+    "support": "Usekelo",
+    "policies": "Imigomo",
+    "status": "Isimo",
+    "blog": "Ibhulogi"
+  },
+  "cta": {
+    "apply": "Thola Ukungena",
+    "readDocs": "Funda Imibhalo",
+    "viewStatus": "Bona Isimo"
+  },
+  "footer": {
+    "hostedBy": "Kusingethwe futhi Kuphethwe yi",
+    "rights": "Wonke amalungelo agodliwe.",
+    "privacy": "Inqubomgomo Yobumfihlo",
+    "accessibility": "Ukufinyeleleka",
+    "data": "Inqubomgomo Yedatha",
+    "aup": "Ukusetshenziswa Okuvumelekileyo",
+    "contact": "Xhumana Nathi"
+  }
+}

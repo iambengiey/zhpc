@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { BRAND } from '../../config/brand';
+import { getUi } from '../../i18n/getUi';
+import { withBase } from '../../utils/links';
+
+const lang = 'en';
+const ui = await getUi(lang);
+---
+<BaseLayout lang={lang} title="ZCHPC">
+  <section class="panel">
+    <h1>Zimbabwe Centre for High Performance Computing</h1>
+    <p>ZCHPC provides national high performance computing infrastructure for research, innovation, and advanced analytics.</p>
+    <img src={BRAND.heroGif} alt="ZCHPC computational systems visual" style="max-width:100%;height:auto;border-radius:.5rem;" />
+  </section>
+  <section class="cta-grid" aria-label="Primary calls to action">
+    <a class="panel" href={withBase('/' + lang + '/get-access')}>{ui.cta.apply}</a>
+    <a class="panel" href={withBase('/' + lang + '/docs')}>{ui.cta.readDocs}</a>
+    <a class="panel" href={withBase('/' + lang + '/status')}>{ui.cta.viewStatus}</a>
+  </section>
+</BaseLayout>
