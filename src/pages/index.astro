@@ -1,0 +1,6 @@
+---
+import { DEFAULT_LANG } from '../i18n/languages';
+import { withBase } from '../utils/links';
+
+return Astro.redirect(withBase(`/${DEFAULT_LANG}/`));
+---

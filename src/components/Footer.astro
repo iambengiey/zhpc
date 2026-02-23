@@ -1,0 +1,29 @@
+---
+import type { Lang } from '../i18n/languages';
+import { getUi } from '../i18n/getUi';
+import { withBase } from '../utils/links';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const ui = await getUi(lang);
+const currentYear = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <p>
+    {ui.footer.hostedBy}
+    <a href="https://gisp.gov.zw" target="_blank" rel="noopener noreferrer">GISP</a>
+  </p>
+  <p>© {currentYear} GISP. {ui.footer.rights}</p>
+  <nav aria-label="Compliance links">
+    <ul class="footer-links">
+      <li><a href={withBase(`/${lang}/policies/privacy`)}>{ui.footer.privacy}</a></li>
+      <li><a href={withBase(`/${lang}/accessibility`)}>{ui.footer.accessibility}</a></li>
+      <li><a href={withBase(`/${lang}/policies/data`)}>{ui.footer.data}</a></li>
+      <li><a href={withBase(`/${lang}/policies/aup`)}>{ui.footer.aup}</a></li>
+      <li><a href={withBase(`/${lang}/contact`)}>{ui.footer.contact}</a></li>
+    </ul>
+  </nav>
+</footer>
